@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+$LOAD_PATH << File.join(__dir__, "../lib")
+require 'blinkbox/rubocop'
+
+puts "Blinkbox-Rubocop v#{Blinkbox::Rubocop::VERSION}"
+
+CONFIG_DIR = File.expand_path(File.join("~", ".bbrubocop"))
+
+if Dir.exist?(CONFIG_DIR)
+  Blinkbox::Rubocop.update_config(CONFIG_DIR)
+else
+  Blinkbox::Rubocop.checkout_config(CONFIG_DIR)
+end
+
+# TODO: Handle alternative config files once we have them
+@config_file = File.join(CONFIG_DIR, "blinkbox_platform.yml")
+
+# TODO: Pass through args
+Kernel.exec("rubocop -D -c #{@config_file}")

@@ -20,7 +20,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install blinkbox-rubocop
+    $ gem install blinkbox-rubocop --source "http://artifactory.blinkbox.local/artifactory/api/gems/bbb-gems/"
 
 ## Usage
 

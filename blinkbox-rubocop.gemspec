@@ -5,7 +5,7 @@ require "blinkbox/rubocop"
 
 Gem::Specification.new do |spec|
   spec.name          = "blinkbox-rubocop"
-  spec.version       = Blinkbox::Rubocop::VERSION
+  spec.version       = File.read("VERSION") rescue "0.0.0"
   spec.authors       = ["Muz"]
   spec.email         = ["muz@blinkbox.com"]
   spec.summary       = %q{Blinkbox wrappers and guff for Rubocop}

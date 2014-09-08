@@ -5,7 +5,7 @@ module Blinkbox
 
     begin
       # Set the Gem Version
-      VERSION = File.read(File.join(__dir__, '../VERSION')).strip
+      VERSION = File.read(File.join(__dir__, '../../VERSION')).strip
     rescue
       VERSION = "0.0.0"
     end

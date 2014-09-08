@@ -1,5 +1,11 @@
 # Change log
 
+## 0.0.3 ([#3](https://git.mobcastdev.com/TEST/blinkbox-rubocop/pull/3) 2014-09-08 09:43:38)
+
+Read VERSION from correct folder
+
+Improvement
+
 ## 0.0.2 ([#2](https://git.mobcastdev.com/TEST/blinkbox-rubocop/pull/2) 2014-08-29 15:12:37)
 
 Use the version from the root file

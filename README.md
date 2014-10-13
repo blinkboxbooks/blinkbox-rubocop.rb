@@ -27,7 +27,19 @@ Or install it yourself as:
 From within the code project you wish to evaluate
 
 ```
-bbrubocop
+$ bbrubocop
+```
+
+Alternatively you can pass rubocop a list of files and directories to check:
+
+```
+$ bbrubocop lib/blinkbox/rubocop.rb bin
+```
+
+For more details check the available command-line options:
+
+```
+$ bbrubocop -h
 ```
 
 ## TODOs

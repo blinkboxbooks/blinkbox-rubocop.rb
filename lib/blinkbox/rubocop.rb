@@ -2,7 +2,6 @@
 module Blinkbox
   # Helper methods for setting up, configuring and running Rubocop.
   module Rubocop
-
     begin
       # Set the Gem Version
       VERSION = File.read(File.join(__dir__, '../../VERSION')).strip

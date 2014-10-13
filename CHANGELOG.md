@@ -1,5 +1,11 @@
 # Change log
 
+## 0.0.5 ([#5](https://git.mobcastdev.com/TEST/blinkbox-rubocop/pull/5) 2014-10-13 15:48:04)
+
+improvement: added support for arguments
+
+Patch
+
 ## 0.0.4 ([#4](https://git.mobcastdev.com/TEST/blinkbox-rubocop/pull/4) 2014-10-13 14:54:42)
 
 Yo dawg, I heard you like rubocop, so I ran rubocop against your rubocop...

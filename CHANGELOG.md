@@ -1,5 +1,11 @@
 # Change log
 
+## 0.0.6 ([#6](https://git.mobcastdev.com/TEST/blinkbox-rubocop/pull/6) 2014-11-14 17:36:01)
+
+added tip on how to run bbrubocop only on files with changes against HEAD
+
+patch
+
 ## 0.0.5 ([#5](https://git.mobcastdev.com/TEST/blinkbox-rubocop/pull/5) 2014-10-13 15:48:04)
 
 improvement: added support for arguments

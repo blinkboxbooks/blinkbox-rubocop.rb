@@ -38,7 +38,6 @@ $ bbrubocop lib/blinkbox/rubocop.rb bin
 
 To run only on files with local changes - [tracked, staged and unstaged, changes against current HEAD](http://stackoverflow.com/questions/5096268/git-reports-get-changed-files)
 ```
-<<<<<<< HEAD
 $ bbrubocop --git-diff
 # or
 $ bbrubocop -g

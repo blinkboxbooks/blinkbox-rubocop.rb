@@ -15,6 +15,26 @@ end
 # TODO: Handle alternative config files once we have them
 @config_file = File.join(CONFIG_DIR, "blinkbox_platform.yml")
 
-rubocop_command = "rubocop -D -c #{@config_file} #{ARGV.join(' ')}"
+# adding --git-diff option to run on locally changed files compared to git remote HEAD
+require 'optparse'
+files = ''
+opt_parser = OptionParser.new do |opts|
+  opts.banner = "Usage: bbrubocop [-g|--git-diff] [file1, file2, folder1, ...]"
+  opts.separator ""
+
+  opts.on('-g', '--git-diff',
+          'run on locally changed files compared to git remote HEAD') do
+    files = %x[ git diff --name-only HEAD | tr "\\n", " " ]
+    puts "Git detected changes in: #{files}"
+    if files.empty? && ARGV.empty?
+      puts "No files to check, quiting..."
+      exit 0 
+    end
+  end
+end
+opt_parser.parse!(ARGV)
+file_list = files + ARGV.join(' ')
+
+rubocop_command = "rubocop -D -c #{@config_file} #{file_list}"
 puts "Running rubocop with arguments: #{rubocop_command}"
 Kernel.exec(rubocop_command)

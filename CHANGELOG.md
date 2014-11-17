@@ -1,5 +1,11 @@
 # Change log
 
+## 0.1.0 ([#8](https://git.mobcastdev.com/TEST/blinkbox-rubocop/pull/8) 2014-11-17 10:55:17)
+
+Minor feature: Added --git-diff option, which will run rubocop on locally changed files
+
+new feature
+
 ## 0.0.6 ([#6](https://git.mobcastdev.com/TEST/blinkbox-rubocop/pull/6) 2014-11-14 17:36:01)
 
 added tip on how to run bbrubocop only on files with changes against HEAD

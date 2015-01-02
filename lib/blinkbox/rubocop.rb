@@ -9,6 +9,15 @@ module Blinkbox
       VERSION = "0.0.0"
     end
 
+    # Configures the URL that git clones the config from
+    def self.config_repo_url
+      if ENV['GITHUB_TOKEN'] # For CI jobs
+        "https://#{ENV['GITHUB_TOKEN']}@git.mobcastdev.com/TEST/rubocop_config.git"
+      else # Assumes that you're previously authenticated for this HTTP host. TODO: SSH support.
+        "https://git.mobcastdev.com/TEST/rubocop_config.git"
+      end
+    end
+
     # Attempts to update an existing checkout of the config files via git.
     def self.update_config(config_dir)
       puts "Updating checked out Rubocop config..."
@@ -26,7 +35,7 @@ module Blinkbox
     # Attempts to checkout a clean copy of the config files via git.
     def self.checkout_config(config_dir)
       puts "Checking out Rubocop config..."
-      `git clone -q https://git.mobcastdev.com/TEST/rubocop_config.git #{config_dir}`
+      `git clone -q #{Blinkbox::Rubocop.config_repo_url} #{config_dir}`
     end
   end
 end

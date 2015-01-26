@@ -1,5 +1,11 @@
 # Change log
 
+## 0.1.1 ([#9](https://git.mobcastdev.com/TEST/blinkbox-rubocop/pull/9) 2015-01-26 18:53:53)
+
+Add support for running on Grisham (CI)
+
+Patch to add support for running on CI and checking out with OAuth tokens.
+
 ## 0.1.0 ([#8](https://git.mobcastdev.com/TEST/blinkbox-rubocop/pull/8) 2014-11-17 10:55:17)
 
 Minor feature: Added --git-diff option, which will run rubocop on locally changed files

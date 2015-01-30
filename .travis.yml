@@ -1,0 +1,13 @@
+language: ruby
+rvm:
+  - 2.0.0
+  - 2.1.2
+deploy:
+  provider: rubygems
+  api_key:
+    secure: ZSY3ckX44CNSYLWdB3T/RK6iOThMQ6dia/arXt4Lb2+F2PnLYmWzTap0+VfgywZW3PcBzPlkyJ/W6KAKqcXwoX932SzG1UCJvUR70ipidQYQKPxc1UC2QriA9hMCjrC/dDtV/T/UVq1VBPykBspSljbJ87RV8DJBgHrrv66k5Xk=
+  gem: blinkbox-rubocop
+  on:
+    repo: blinkboxbooks/blinkbox-rubocop.rb
+    rvm: 2.1.2
+    branch: public

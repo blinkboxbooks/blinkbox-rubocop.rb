@@ -10,4 +10,4 @@ deploy:
   on:
     repo: blinkboxbooks/blinkbox-rubocop.rb
     rvm: 2.1.2
-    branch: public
+    branch: master
